@@ -1,0 +1,27 @@
+﻿@model IDictionary<string, object>
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AWS EC2 Sample</title>
+</head>
+<body>
+
+    @if (Model != null)
+    {
+        <ul>
+            @foreach (var p in Model)
+            {
+                <li>
+                    <strong>@p.Key</strong>: @p.Value
+                </li>
+            }
+        </ul>
+    }
+
+</body>
+</html>
+
